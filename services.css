@@ -8,6 +8,10 @@ html, body {
 .main-container-services{
     display: flex;
     flex-direction: column;
+    background-image: url('https://bootstrapmade.com/content/demo/Arsha/assets/img/cta-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center;
 }
 .services-top{
     display: flex;
@@ -60,6 +64,7 @@ html, body {
     margin: auto;
 }
 .services-explain{
+    line-height: 1.5;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
     margin: 0;
     font-size: 16px;
@@ -97,10 +102,61 @@ html, body {
     color: #47b2e4; 
 }
 .services-icon-explain{
+    line-height: 24px;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     margin: 0;
     font-size: 14px;
 }
 .services-bottom{
+    padding: 0 188px;
+    justify-content: space-between;
+    gap: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 345.59px;
+    background: color-mix(in srgb, #37517e, transparent 35%);
+}
+.call-to-action{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    margin: 0 0 8px;
+}
+.services-bottom-divide-left{
+    padding: 0 12px;
+    left: 100px
+}
+.services-bottom-divide-right{
+    display: inline-flex;
+    position: relative;
+    line-height: 1.5;
+    margin-left: 60px;
+    top:-13px;
+    left: -30px;
+    text-align: center; 
+    white-space: nowrap;
+    padding: 0 12px;
+}
+.call-to-action-explain{
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0 0 16px;
+}
+.services-bottom-right{
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    transition: 0.5s;
+    margin: 10px;
 }

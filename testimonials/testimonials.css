@@ -95,19 +95,17 @@ h1, h2, h3, h4, h5 {
 .stars{
     padding: 0 0 15px;
 }
+.star-icon::before {
+    content: "\f586"; 
+    font-size: inherit; 
+    color: inherit; 
+}
 .star-icon {
     font-size: 16px; 
     position: relative;
     color: #ffc107; 
     margin: 0 1px;
 }
-
-.star-icon::before {
-    content: "\f586"; 
-    font-size: inherit; 
-    color: inherit; 
-}
-
 .testimonials .testimonial-item p {
     font-style: italic; 
     margin: 0 auto 15px auto;
@@ -120,15 +118,15 @@ p{
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
-.quote{
-    font-size: 26px;
-    position: relative;
-    color: color-mix(in srgb, var(--accent-color), transparent 50%);
-}
 .quote::before{
     content: "\f6b0";
     font-size: inherit; 
     color: inherit; 
+}
+.quote{
+    font-size: 26px;
+    position: relative;
+    color: color-mix(in srgb, var(--accent-color), transparent 50%);
 }
 .testimonials .testimonial-item .quote-right {
     display: inline-block;

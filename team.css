@@ -1,3 +1,4 @@
+
 body{
     font-family:"Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 16px;
@@ -6,17 +7,14 @@ body{
     color: #212529;
     text-align: 1.5;
 }
-.container{
-    display: grid;
-    grid-template-columns: 1fr;
+.team-container{
+    display: flex;
     justify-content: center;
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
-    margin: 0 auto;
-    width: 100%;
 }
 .main-container-team{
     display: grid;
@@ -32,52 +30,50 @@ body{
     align-items: center;
     position: relative;
 }
-h1, h2, h3 , h4 ,h5, h6{
-    color: rgb(55, 81, 126);
-    font-family:  Jost, sans-serif;
-}
+
 
 .team-header{
     text-align: center;
     padding: 0px 12px 60px 12px;
     position: relative;
     grid-column: span 2;
-    margin-inline: 102px;
     height: 102px;
 }
-.team-header h2{
+.team-title{
+    font-family: "Jost", sans-serif;
+    color: rgb(55, 81, 126);
     font-size: 32px;
     font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 20px;
-    text-transform: uppercase; /*소문자를 대문자로*/
+    text-transform: uppercase;
     position: relative;
 }
-.team-header h2 > div:before{
+.team-title > div:before{
     content: "";
     position: absolute;
     display: block;
     width: 160px;
     height: 1px;
-    background: color-mix(in srgb, rgb(255, 255, 255), transparent 60%);
+    background: color-mix(in srgb, #444444, transparent 60%);
     left: 0;
     right: 0;
     bottom: 1px;
     margin: auto;
 }
-.team-header h2 > div:after{
+.team-title > div:after{
     content: "";
     position: absolute;
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--accent-color);
+    background: #47b2e4;
     left: 0;
     right: 0;
     bottom: 0;
     margin: auto;
 }
-.team-header p{
+.team-subtitle{
     margin-top: 0;
     margin-bottom: 0;
     display: block;
@@ -92,13 +88,15 @@ h1, h2, h3 , h4 ,h5, h6{
     position: relative;
     border-radius: 5px;
     transition: 0.5s;
-    max-width: 100%;
+    width: 576px;
     height: 161px;
-    margin-top: 24px;
     padding: 30px 12px;
     display: flex;
     align-items: center;
     gap: 20px;
+}
+.team-member:hover{
+    transform: translateY(-10px);
 }
 img{
     vertical-align: middle;
@@ -111,33 +109,50 @@ img{
     object-fit: cover;
     flex-shrink: 0;
 }
-
-
-.team-member h3{
+.team-member-info{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+.name{
+    font-family: "Jost", sans-serif;
     font-weight: 700;
     margin-bottom: 5px;
     font-size: 20px;
     display: block;
+    color: rgb(55, 81, 126);
 }
-.team-member h4{
+.role{
     font-size: 15px;
     padding-bottom: 10px;
     position: relative;
     font-weight: 500;
     color: black;
+    margin: 0;
 }
-.team-member h5{
+.description{
     margin: 10px 0 0 0;
     font-size: 14px;
-    color: black
+    color: rgb(68, 68, 68);
+    font-weight: normal;
     }
+.team-member .role::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: color-mix(in srgb, #444444, transparent 85%);
+    bottom: 0;
+    left: 0;
+}
 .social{
     margin-top: 12px;
     display: flex;
     width: 100%;
     gap: 10px;
 }
-.social-img{
+.social div{
     background: color-mix(in srgb, #444444, transparent 94%);
     border-radius: 50%;
     display: flex;
@@ -146,17 +161,23 @@ img{
     width: 36px;
     height: 36px;
     object-fit: contain;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.social-img .img{
-    width: 60%;
-    height: 60%;
-    margin-inline: 2px;
+.social div img{
+    width: 50%; 
+    height: auto; 
     object-fit: contain;
-    filter: invert(0);
 }
-.social-img:hover {
+.socials img div img {
+    width: 20px;
+    height: 20px;
+    fill: #444444d8;
+    transition: fill 0.3s ease; 
+}
+.social div:hover {
     background: rgb(71, 178, 228);
 }
-.social-img:hover img{
+.social div:hover img{
     filter: invert(1);
-}
+} 

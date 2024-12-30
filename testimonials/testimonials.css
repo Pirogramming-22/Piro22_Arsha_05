@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+body{
+    min-height: 100vh;
+}
+:root{
+    --background-color: #ffffff;
+    --default-color: #444444;
+    --heading-color: #37517e;
+    --accent-color: #47b2e4;
+    --surface-color: #ffffff;
+    --contrast-color: #ffffff;
+}
+@media (max-width: 1199px) {
+    section, .section {
+        scroll-margin-top: 66px;
+    }
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    padding: 60px 0;
+    scroll-margin-top: 88px;
+    overflow: clip;
+    color: var(--default-color);
+    background-color: var(--background-color);
+}
+.container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: calc(100% - 3rem);
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
+h1, h2, h3, h4 {
+    color: var(--heading-color);
+    font-family: var(--heading-font);
+    text-align: center;
+}
+.section-title{
+    margin: 0 26.5px;
+    padding: 0 12px 60px;
+}
+.section-title h2:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: color-mix(in srgb, var(--default-color), transparent 60%);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+.testimonials .section-title p{
+    text-align: center;
+}
+.testimonial-img {
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--background-color);
+    margin: 0 auto;
+    vertical-align: middle;
+}
+.testimonials .testimonial-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px 0;
+}
+.testimonials .testimonial-item h4 {
+    font-size: 14px;
+    color: color-mix(in srgb, var(--default-color), transparent 40%);
+    margin: 0 0 15px 0;
+}
+.stars{
+    padding: 0 0 15px;
+}
+.star-icon img{
+    width: 16px;
+    height: 16px; 
+    position: relative;
+    color: #ffc107; 
+    margin: 0 1px;
+}
+.testi-wrap{
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    margin: 0px auto;
+}
+.testimonials .testimonial-item p {
+    font-style: italic; 
+    margin: 0 auto 15px auto;
+}
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+.quote-left img, .quote-right img{
+    width: 26px;
+    height: 26px;
+    position: relative;
+}
+.circle-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+}
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.testimonials-slider {
+    position: relative;
+    text-align: center;
+  }
+  .testimonials-slider input[type="radio"] {
+    display: none;
+  }
+  .testimonial-item {
+    display: none;
+    margin: 0 auto;
+  }
+  #slide01:checked ~ .testimonial-items .slide1,
+  #slide02:checked ~ .testimonial-items .slide2,
+  #slide03:checked ~ .testimonial-items .slide3,
+  #slide04:checked ~ .testimonial-items .slide4,
+  #slide05:checked ~ .testimonial-items .slide5{
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+  .slider-navigation {
+    margin-top: 20px;
+  }
+  .circle {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #slide01:checked ~ .slider-navigation label[for="slide01"],
+  #slide02:checked ~ .slider-navigation label[for="slide02"],
+  #slide03:checked ~ .slider-navigation label[for="slide03"],
+  #slide04:checked ~ .slider-navigation label[for="slide04"], 
+  #slide05:checked ~ .slider-navigation label[for="slide05"]{
+    background-color: #47b2e4;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }  

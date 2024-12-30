@@ -1,0 +1,428 @@
+:root {
+    --heading-color: #37517e;
+    --default-color: #444444; 
+    --accent-color: #47b2e4;
+    --surface-color: #ffffff;
+    --background-color: #ffffff;
+    --contrast-color: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*aboutus1 css*/
+
+.aboutus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-color);
+    padding-block: 60px 20px;
+}
+
+.contatiner1_section_pricing_title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.aboutus_container1_title {
+    position: relative;
+    font-family: "Jost",  sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--heading-color);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+.aboutus_container1_title::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: color-mix(in srgb, var(--default-color), transparent 60%);
+    left: 0;
+    right: 0;
+    bottom: 1px;
+    margin: auto;
+}
+
+.aboutus_container1_title::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--accent-color);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+} 
+
+.container1_section_aboutus_items {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 0px;
+    max-width: 1700px;
+    width: 100%;
+    padding: 0 30px;
+    color: var(--default-color);
+    line-height: 1.6;
+}
+
+.container1_section_aboutus_items > div {
+    background-color: var(--background-color);
+    padding: 30px;
+}
+
+.aboutus_item_checked {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.checkedlist-img {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+
+.read_more_btn {
+    display: inline-block;
+    align-items: center;
+    padding: 5px 35px 8px 35px;
+    border-radius: 5px;
+    transition: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    text-decoration: none;
+    margin-top: 20px;
+    font-family: "Jost",  sans-serif;
+}
+
+.read_more_btn::after {
+    font-family: "Jost",  sans-serif;
+    content: "→";
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.read_more_btn:hover {
+    background: var(--accent-color);
+    color: var(--contrast-color);
+    border: 1px solid var(--accent-color);
+    transition: 0.3s;
+}
+
+.read_more_btn:hover::after {
+    transform: translateX(5px);
+}
+
+/*aboutus2 css*/
+
+.aboutus_container2 {
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 20px;
+    background-color: #f5f6f8;
+}
+
+.aboutus_container2_title {
+    font-family: "Jost",  sans-serif;
+    font-size: 34px;
+    max-width: 750px;
+    line-height: 1.2;
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.aboutus_container2_title span {
+    font-weight: 400;
+}
+
+.aboutus_container2_title strong {
+    font-weight: 700;
+    color: var(--heading-color);
+}
+
+.aboutus_container2_subtitle {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    line-height: 1.6;
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: left;
+    margin-left: 50px;
+}
+
+.aboutus_container2_items {
+    font-family: "Jost",  sans-serif;
+    display: grid;
+    grid-template-columns: 1;
+    gap: 30px;
+    max-width: 770px;
+    margin: 20 auto;
+    padding: 20px;
+}
+
+.aboutus_container2_item_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.aboutus_container2_item_Q {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--surface-color);
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    color: var(--heading-color);
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.aboutus_container2_item_Q:hover {
+    color: var(--accent-color);
+}
+
+.aboutus_container2_item_Q h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.aboutus_container2_item_num {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-color);
+    margin-right: 10px;
+}
+
+.chevron_right_label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.chevron_right_input {
+    display: none;
+}
+
+.chevron_right_btn {
+    font-size: 24px;
+    color: var(--default-color);
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.chevron_right_input:checked + .chevron_right_btn {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+}
+
+.aboutus_container2_item_Q:hover .chevron_right_btn img {
+    transform: rotate(90deg);
+}
+
+.aboutus_container2_item_A {
+    display: none;
+    padding: 15px 20px;
+    font-size: 14px;
+    color: var(--default-color);
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.aboutus_container2_item_Q.active + .aboutus_container2_item_A {
+    display: block;
+}
+
+.aboutus_item {
+    background-color: var(--surface-color);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+  
+.aboutus_toggle {
+    display: none;
+}
+  
+.aboutus_label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+  
+  .aboutus_question {
+    color: var(--heading-color);
+    white-space: nowrap;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+}
+  
+.chevron-icon img {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.aboutus_content {
+    color: var(--default-color);
+    font-size: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+  
+.aboutus_toggle:checked ~ .aboutus_content {
+    max-height: 500px;
+    padding-top: 10px;
+}
+  
+.aboutus_toggle:checked + .aboutus_label .chevron-icon img {
+    transform: rotate(90deg);
+}
+
+.aboutus_container2_pic {
+    flex: 1; /* 컨테이너가 적은 공간을 차지 */
+    display: flex;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+    align-items: flex-start; /* 위쪽 정렬 */
+    margin-left: 20px; /* 그리드와 약간의 간격 */
+}
+
+.aboutus_container2_pic img {
+    max-width: 30%; /* 사진 크기 축소 */
+    height: auto; /* 비율 유지 */
+    display: block; /* 여백 제거 */
+}
+ 
+/*aboutus3 css*/
+
+.aboutus_container3_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.aboutus_container3 {
+    gap: 60px;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--background-color);
+}
+
+.aboutus_container3_left img {
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.aboutus_container3_right {
+    display: grid;
+    gap: 20px;
+}
+
+.aboutus_container3_title {
+    font-family: "Jost",  sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-top: -20px;
+    margin-bottom: -10px;
+    line-height: 1.2;
+}
+
+.aboutus_container3_subtitle {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-style: italic;
+    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    line-height: 1.6;
+}
+
+.aboutus_container3_skill {
+    display: grid;
+    gap: 8px;
+}
+
+.aboutus_container3_skill_title {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--default-color);
+}
+
+.aboutus_container3_skill_title i {
+    font-style: normal;
+}
+
+.aboutus_container3_skill_bar {
+    width: 100%;
+    height: 10px;
+    background: color-mix(in srgb, var(--heading-color), transparent 90%);
+    position: relative;
+}
+
+.aboutus_container3_skill_html {
+    width: 100%;
+    height: 100%;
+    background-color: var(--heading-color);
+}
+
+.aboutus_container3_skill_css {
+    width: 90%;
+    height: 100%;
+    background-color: var(--heading-color);
+}
+
+.aboutus_container3_skill_js {
+    width: 75%;
+    height: 100%;
+    background-color: var(--heading-color);
+}
+
+.aboutus_container3_skill_photoshop {
+    width: 55%;
+    height: 100%;
+    background-color: var(—heading-color);
+}

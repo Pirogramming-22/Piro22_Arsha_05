@@ -63,12 +63,15 @@ html, body {
     font-size: 16px;
 }
 .contact-bottom{
+    height: 604.78px;
     display: flex;
     justify-content: center;
     align-items: center;
     gap:24px;
 }
 .contact-bottom-left{
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -79,6 +82,9 @@ html, body {
 }
 .contact-bottom-left-part{
     margin: 0 0 40px;
+}
+.contact-name{
+    padding: 0 0 8px;
 }
 .class-contact-icon{
     width: 44px;
@@ -98,7 +104,12 @@ html, body {
     font-size: 14px;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+.contact-map {
+    flex-grow: 1; 
+}
 .contact-bottom-right{
+    height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
@@ -113,19 +124,9 @@ html, body {
     justify-content: center; 
     align-items: center;
 }
-.info{
-    display: flex;
-    flex-direction: column;
-    margin: 24px 0 0;
-    padding: 0 12px;
-}
-.info-long{
-    display: flex;
-    flex-direction: column;
-    margin: 24px 0 0;
-    padding: 0 12px;
-}
-.info-big{
+.info,
+.info-long, 
+.info-small{
     display: flex;
     flex-direction: column;
     margin: 24px 0 0;
@@ -137,4 +138,15 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.contact-input{
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    border-color: color-mix(in srgb, #444444, transparent 80%);
+    border: 1px solid #dee2e6;
+}
+.info-small{
+    width:331px;
 }

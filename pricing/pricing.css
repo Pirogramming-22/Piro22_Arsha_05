@@ -18,7 +18,8 @@
     flex-direction: column;
     align-items: center;
     background-color: #f5f6f8;
-    padding-block: 60px 20px;
+    padding-block: 40px;
+    margin-top: -20px;
 }
 
 .contatiner_section_pricing_title {
@@ -79,7 +80,8 @@
     width: 100%;
     max-width: 1300px;
     margin: 0 auto;
-    padding-block: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
 }
 

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>헤더 푸터 테스트</title>
+  <title>5조 Arsha 클론 페이지</title>
   <link rel="stylesheet" href="HeaderFooter.css">
 </head>
 <body>
@@ -30,19 +30,39 @@
     </div>
     <div class="Header-down">
       <h1>ARSHA</h1>
+      <nav>
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Services</a>
-      <a href="#">Portfolio</a>
+      <a href="#portfolio">Portfolio</a>
       <a href="#">Team</a>
       <a href="#">Pricing</a>
-      <a href="#">Dropdown</a>
+      <div class="dropdown">
+        <a href="#" class="dropdown-trigger">Dropdown ▼</a>
+        <div class="dropdown-menu">
+          <a href="#">Dropdown 1</a>
+          <div class="deep-dropdown">
+            <a href="#" class="deep-dropdown-trigger">Deep Dropdown ▼</a>
+            <div class="deep-dropdown-menu">
+              <a href="#">Deep Dropdown 1</a>
+              <a href="#">Deep Dropdown 2</a>
+              <a href="#">Deep Dropdown 3</a>
+              <a href="#">Deep Dropdown 4</a>
+              <a href="#">Deep Dropdown 5</a>
+            </div>
+          </div>
+          <a href="#">Dropdown 2</a>
+          <a href="#">Dropdown 3</a>
+          <a href="#">Dropdown 4</a>
+        </div>
+      </div>
       <a href="#">Contact</a>
       <button type="button" class="start-button">Get Started</button>
+      </nav>
     </div>
   </Header>
   <Main>
-    <section class="portfolio-section">
+    <section id="portfolio" class="portfolio-section">
       <h2>PORTFOLIO</h2>
       <p class="subtitle">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
       
@@ -60,32 +80,104 @@
         </div>
     
         <div class="portfolio-grid">
-          <div class="portfolio-item all app tall">
+          <div class="portfolio-item all app">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-1.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>App 1</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio-item all app">
+          <div class="portfolio-item all card">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-2.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Product 1</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio-item all app">
+          <div class="portfolio-item all web">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-3.jpg" alt="포트폴리오 이미지">
-          </div>
-          <div class="portfolio-item all app wide">
-            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Branding 1</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
           <div class="portfolio-item all app">
-            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" alt="포트폴리오 이미지">
+            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-4.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>App 2</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio-item all app tall">
+          <div class="portfolio-item all card tall-wide">
+            <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-5.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Product 2</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio-item all web tall-wide">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-6.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Branding 2</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
           <div class="portfolio-item all app">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-7.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>App 3</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio-item all app">
+          <div class="portfolio-item all card">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-8.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Product 3</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
-          <div class="portfolio-item all app">
+          <div class="portfolio-item all web">
             <img src="https://bootstrapmade.com/content/demo/Arsha/assets/img/masonry-portfolio/masonry-portfolio-9.jpg" alt="포트폴리오 이미지">
+            <div class="portfolio-info">
+              <h4>Branding 3</h4>
+              <p>Lorem ipsum, dolor sit</p>
+              <div class="portfolio-links">
+                <a href="#"><img src="./images/glass.png" alt="검색"></a>
+                <a href="#"><img src="./images/link.png" alt="링크"></a>
+              </div>
+            </div>
           </div>
       </div>
     </section>
@@ -102,7 +194,7 @@
     <div class="Footer-down">
       <div class="Footer-content">
         <div class="Footer-info">
-        <a href="#">ARSHA</a>
+        <h2><a href="#">ARSHA</a></h2>
         <p>A108 Adam Street<br>New York, NY 535022</p>
         <p><strong>Phone:</strong>+1 5589 55488 55</p>
         <p><strong>Email:</strong> info@example.com</p>
@@ -127,7 +219,8 @@
       </div>
       <div class="Footer-social">
         <h4>Follow Us</h4>
-        <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+        <p>Cras fermentum odio eu feugiat lide par naso tierra videa</p>
+        <p>magna derita valies</p>
         <div class="social-links">
           <a href="#"><img src="./images/free-icon-twitter-5968958.png" alt="트위터"></a>
           <a href="#"><img src="./images/free-icon-facebook-1384005.png" alt="페이스북"></a>

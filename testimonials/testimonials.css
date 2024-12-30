@@ -81,20 +81,53 @@ h1, h2, h3, h4, h5 {
 .testimonials .section-title p{
     text-align: center;
 }
+.swiper-wrapper{
+    max-width:1000px;
+    width:100%;
+    margin:0 auto;
+    text-align:center;
+}
 .testimonials .testimonial-item {
+    position: relative;
+    display:inline-block;
     text-align: center;
     backface-visibility: hidden;
     transform: translateZ(0);
-    transition: transform 1s ease-in-out;  
-    flex: 0 0 100% 
-}
-.swiper {
-    margin-left: 97px;
-    margin-right: 97px;
+    transition:all .35s; 
+    vertical-align: middle;
+    width: 100%;
 }
 .swiper-wrapper{
     animation: slide 15s infinite;
     display: flex;
+}
+.swiper-slide{
+    list-style: none;
+}
+.swiper-list .testumonials-slide label {
+	position:absolute;
+	z-index:1;
+	top:50%;
+	transform:translateY(-50%);
+	padding:20px;
+	border-radius:50%;
+	cursor:pointer;
+}
+label.left {
+	left:20px;
+	background-color:#5F5F5F;
+	background-image:url('./img/left-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
+}
+label.right {
+	right:20px;
+	background-color:#5F5F5F;
+	background-image:url('./img/right-arrow.png');
+	background-position:center center;
+	background-size:50%;
+	background-repeat:no-repeat;
 }
 .testimonials .testimonial-item .testimonial-img {
     width: 120px;
@@ -156,6 +189,56 @@ p{
     top: 10px;
     transform: scale(-1, -1);
 }
+
+[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+
+@keyframes slide01 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:-300%;}
+	98% {left:-300%;}
+	100% {left:0%;}
+}
+@keyframes slide02 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:-200%;}
+	73% {left:-200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide03 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:-100%;}
+	48% {left:-100%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
+@keyframes slide04 {
+	0% {left:0%;}
+	23% {left:0%;}
+	25% {left:300%;}
+	48% {left:300%;}
+	50% {left:200%;}
+	73% {left:200%;}
+	75% {left:100%;}
+	98% {left:100%;}
+	100% {left:0%;}
+}
 .swiper-circles {
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
@@ -173,13 +256,6 @@ p{
     background-color: color-mix(in srgb, var(--default-color), transparent 85%);
     margin: 0 4px;
     transition: background-color 0.3s ease;
-}
-@keyframes slide {
-    0%, 100% { transform: translateX(0); } 
-    20% { transform: translateX(-100%); } 
-    40% { transform: translateX(-200%); } 
-    60% { transform: translateX(-300%); } 
-    80% { transform: translateX(-400%); } 
 }
 @keyframes swiper-circles {
     0%, 100% {

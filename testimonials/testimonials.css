@@ -97,10 +97,6 @@ h1, h2, h3, h4, h5 {
     vertical-align: middle;
     width: 100%;
 }
-.swiper-wrapper{
-    animation: slide 15s infinite;
-    display: flex;
-}
 .swiper-slide{
     list-style: none;
 }
@@ -133,13 +129,9 @@ h1, h2, h3, h4, h5 {
 .stars{
     padding: 0 0 15px;
 }
-.star-icon::before {
-    content: "\f586"; 
-    font-size: inherit; 
-    color: inherit; 
-}
-.star-icon {
-    font-size: 16px; 
+.star-icon img{
+    width: 16px;
+    height: 16px; 
     position: relative;
     color: #ffc107; 
     margin: 0 1px;
@@ -156,24 +148,11 @@ p{
     margin-inline-end: 0px;
     unicode-bidi: isolate;
 }
-.quote::before{
-    content: "\f6b0";
-    font-size: inherit; 
-    color: inherit; 
-}
-.quote{
-    font-size: 26px;
+.quote-left img, .quote-right img{
+    width: 26px;
+    height: 26px;
     position: relative;
-    color: color-mix(in srgb, var(--accent-color), transparent 50%);
 }
-.testimonials .testimonial-item .quote-right {
-    display: inline-block;
-    right: -5px;
-    position: relative;
-    top: 10px;
-    transform: scale(-1, -1);
-}
-
 [id="slide01"]:checked ~ .swiper-list .swiper-slide {transform:translateX(0);animation:slide01 20s infinite;}
 [id="slide02"]:checked ~ .swiper-list .swiper-slide {transform:translateX(-100%);animation:slide02 20s infinite;}
 [id="slide03"]:checked ~ .swiper-list .swiper-slide {transform:translateX(-200%);animation:slide03 20s infinite;}

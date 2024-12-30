@@ -1,0 +1,169 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    width: 100%;
+    height: 100%;
+}
+.main-container-services{
+    display: flex;
+    flex-direction: column;
+    background-image: url('https://bootstrapmade.com/content/demo/Arsha/assets/img/cta-bg.jpg');
+    background-attachment: fixed;
+    background-size: cover; 
+    background-position: center;
+}
+.services-top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    color: #444444;
+    background-color: #f5f6f8;
+}
+.services-top-p{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 62px;
+    padding: 0 12px 60px;
+}
+.services-title{
+    font-family: "Jost", sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 20px;
+    padding-bottom: 20px;
+    color: #37517E;
+}
+.services-title::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: color-mix(in srgb, #444444, transparent 60%);
+    left: 0;
+    right: 0;
+    bottom: 101px;
+    margin: auto;
+}
+.services-title::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #47b2e4;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+    margin: auto;
+}
+.services-explain{
+    letter-spacing: 0.3px;
+    line-height: 1.5;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    margin: 0;
+    font-size: 16px;
+}
+.services-list{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+}
+.services-item{
+    cursor: pointer;
+    width: 246px;
+    height: 275px;
+    background-color: #ffffff;
+    padding: 0 30px;
+    transition: transform 0.5s ease;
+}
+.services-item:hover {
+    transform: translateY(-10px);
+}
+.services-item-in{
+    padding: 50px 30px;
+}
+.services-icon{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.services-icon-title{
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #37517e;
+    font-family: "Jost", sans-serif;
+}
+.services-item:hover .services-icon-title{
+    color: #47b2e4; 
+}
+.services-icon-explain{
+    line-height: 24px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0;
+    font-size: 14px;
+}
+.services-bottom{
+    padding: 0 188px;
+    justify-content: space-between;
+    gap: 40px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 345.59px;
+    background: color-mix(in srgb, #37517e, transparent 35%);
+}
+.call-to-action{
+    font-size: 28px;
+    font-weight: 700;
+    font-family: "Jost", sans-serif;
+    margin: 0 0 8px;
+}
+.services-bottom-divide-left{
+    padding: 0 12px;
+    left: 100px
+}
+.services-bottom-divide-right{
+    display: inline-flex;
+    position: relative;
+    line-height: 1.5;
+    margin-left: 60px;
+    top:-13px;
+    left: -30px;
+    text-align: center; 
+    white-space: nowrap;
+    padding: 0 12px;
+}
+.call-to-action-explain{
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin: 0 0 16px;
+}
+.services-bottom-right{
+    border-radius: 50px;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 12px 40px;
+    transition: 0.5s;
+    margin: 10px;
+}
+.services-bottom-right:hover{
+    border: 2px solid #47b2e4;
+    background-color: #47b2e4;
+    transition: 0.5s
+}

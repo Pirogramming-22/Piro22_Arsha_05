@@ -29,10 +29,10 @@ section{
     align-items: center;
     position: relative;
 }
-.faq-section{
+.total-faq{
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-     width: 100%;
+    width: calc(100% - 3rem);
     padding-right: calc(var(--bs-gutter-x)* .5);
     padding-left: calc(var(--bs-gutter-x)* .5);
     margin-right: auto;
@@ -47,8 +47,10 @@ h1, h2, h3, h4, h5 {
     font-family: var(--heading-font);
     text-align: center;
 }
-.section-title{
-    padding: 0 12px 60px;
+.section-title {
+    text-align: center;
+    padding-bottom: 60px;
+    position: relative;
 }
 .section-title h2:before {
     content: "";
@@ -81,28 +83,15 @@ h1, h2, h3, h4, h5 {
     bottom: 0;
     margin: auto;
 }   
+.faq-container .faq-items .faq-item h3:hover{
+    color: var(--accent-color);
+
+}
 .faq-section .section-title p {
     text-align: center;
 }
-.faq-wrap{
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1* var(--bs-gutter-y));
-    margin-right: calc(-.5* var(--bs-gutter-x));
-    margin-left: calc(-.5* var(--bs-gutter-x));
-}
 .faq-container {
-    --bs-gutter-x: 1.5rem;
-    --bs-gutter-y: 0;
-    flex-shrink: 0;
-    width: 100%;
     max-width: 100%;
-    padding-right: calc(var(--bs-gutter-x)* .5);
-    padding-left: calc(var(--bs-gutter-x)* .5);
-    margin-top: var(--bs-gutter-y);
-    display: flex;
 }
 @media (min-width: 992px) {
     .faq-items {
@@ -114,6 +103,9 @@ h1, h2, h3, h4, h5 {
 .faq-items{
     margin-top: 15px;
 }
+.faq-toggle {
+    display: none;
+}
 .faq-item {
     background-color: var(--surface-color);
     display: block;
@@ -122,9 +114,16 @@ h1, h2, h3, h4, h5 {
     margin: 0 0 20px;
     overflow: hidden;
 }
+.faq-item label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
 .faq-questionmark::before, .chevron-icon::before{
     display: inline-block;
-    font-family: bootstrap-icons !important;
+    /* font-family: bootstrap-icons !important; */
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
@@ -134,6 +133,8 @@ h1, h2, h3, h4, h5 {
 }
 .faq-questionmark::before {
     content: "\f505";
+    font-size: inherit; 
+    color: inherit;
 }
 .faq-questionmark{
     position: absolute;
@@ -141,7 +142,6 @@ h1, h2, h3, h4, h5 {
     left: 20px;
     font-size: 20px;
     line-height: 0;
-    transition: 0.3s;
     color: var(--accent-color);
 }
 .faq-items h3 {
@@ -149,13 +149,16 @@ h1, h2, h3, h4, h5 {
     font-size: 18px;
     line-height: 24px;
     margin: 0 30px 0 32px;
-    transition: 0.3s;
     cursor: pointer;
     display: flex;
 }
-
 .chevron-icon::before {
     content: "\f285";
+    font-size: inherit; 
+    color: inherit;
+}
+.chevron-icon:hover {
+    color: var(--accent-color);
 }
 .chevron-icon{
     position: absolute;
@@ -163,6 +166,36 @@ h1, h2, h3, h4, h5 {
     right: 20px;
     font-size: 16px;
     line-height: 0;
-    transition: 0.3s;
+    transition: transform 0.5s ease-in-out;
     cursor: pointer;
+}
+.faq-toggle:checked + label .chevron-icon::before {
+    transform: rotate(90deg);
+    color: var(--accent-color);
+    transition: transform 0.5s ease-in-out;
+}
+.faq-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;   
+}
+.faq-content p{
+    margin: 0;
+}
+.faq-toggle:checked ~ .faq-content {
+    max-height: 1000px; 
+    padding: 10px 0 0; 
+}
+.faq-toggle:not(:checked) ~ .faq-content{
+    transition: transform 0.5s ease-in-out;
+}
+.faq-toggle:checked + .faq-content{
+    transition: transform 0.5s ease-in-out;
+}
+.faq-toggle:not(:checked) + .faq-content{
+    transition: transform 0.5s ease-in-out;
+}
+.faq-toggle:not(:checked) + label .chevron-icon::before {
+    transform: rotate(0deg); 
+    transition: transform 0.5s ease-in-out; 
 }

@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 :root{
     --background-color: #ffffff;
     --default-color: #444444;
@@ -26,11 +29,19 @@ section{
     align-items: center;
     position: relative;
 }
+.container{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: calc(100% - 3rem);
+    padding-right: calc(var(--bs-gutter-x)* .5);
+    padding-left: calc(var(--bs-gutter-x)* .5);
+    margin-right: auto;
+    margin-left: auto;
+}
 h1, h2, h3, h4, h5 {
     color: var(--heading-color);
     font-family: var(--heading-font);
     text-align: center;
-
 }
 .section-title{
     margin: 0 26.5px;
@@ -67,13 +78,23 @@ h1, h2, h3, h4, h5 {
     bottom: 0;
     margin: auto;
 }
+.testimonials .section-title p{
+    text-align: center;
+}
 .testimonials .testimonial-item {
     text-align: center;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 1s ease-in-out;  
+    flex: 0 0 100% 
 }
 .swiper {
     margin-left: 97px;
     margin-right: 97px;
- 
+}
+.swiper-wrapper{
+    animation: slide 15s infinite;
+    display: flex;
 }
 .testimonials .testimonial-item .testimonial-img {
     width: 120px;
@@ -84,7 +105,7 @@ h1, h2, h3, h4, h5 {
 }
 .testimonials .testimonial-item h3 {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
     margin: 10px 0 5px 0;
 }
 .testimonials .testimonial-item h4 {
@@ -135,7 +156,7 @@ p{
     top: 10px;
     transform: scale(-1, -1);
 }
-.swiper-pagination {
+.swiper-circles {
     transition: .3s opacity;
     transform: translate3d(0, 0, 0);
     z-index: 10;
@@ -151,4 +172,44 @@ p{
     border-radius: 50%;
     background-color: color-mix(in srgb, var(--default-color), transparent 85%);
     margin: 0 4px;
+    transition: background-color 0.3s ease;
 }
+@keyframes slide {
+    0%, 100% { transform: translateX(0); } 
+    20% { transform: translateX(-100%); } 
+    40% { transform: translateX(-200%); } 
+    60% { transform: translateX(-300%); } 
+    80% { transform: translateX(-400%); } 
+}
+@keyframes swiper-circles {
+    0%, 100% {
+      background-color: color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+    20% {
+      background-color: var(--accent-color);
+    }
+  }
+.swiper-circle:nth-child(1) {
+    animation: swiper-circles 15s infinite;
+    animation-delay: 0s; 
+  }
+  
+.swiper-circle:nth-child(2) {
+    animation: swiper-circles 15s infinite;
+    animation-delay: 3s; 
+  }
+  
+.swiper-circle:nth-child(3) {
+    animation: swiper-circles 15s infinite;
+    animation-delay: 6s; 
+  }
+  
+.swiper-circle:nth-child(4) {
+    animation: swiper-circles 15s infinite;
+    animation-delay: 9s; 
+  }
+  
+.swiper-circle:nth-child(5) {
+    animation: swiper-circles 15s infinite;
+    animation-delay: 12s; 
+  }

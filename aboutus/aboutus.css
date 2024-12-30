@@ -71,6 +71,7 @@
     grid-template-columns: 1fr 1fr;
     row-gap: 0px;
     max-width: 1700px;
+    margin-left: 200px;
     width: 100%;
     padding: 0 30px;
     color: var(--default-color);
@@ -171,7 +172,7 @@
     max-width: 720px;
     margin: 0 auto;
     text-align: left;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 .aboutus_container2_items {
@@ -313,18 +314,35 @@
     transform: rotate(90deg);
 }
 
-.aboutus_container2_pic {
-    flex: 1; /* 컨테이너가 적은 공간을 차지 */
+.aboutus_container2_content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.aboutus_qa_wrapper {
     display: flex;
-    justify-content: flex-end; /* 오른쪽 정렬 */
-    align-items: flex-start; /* 위쪽 정렬 */
-    margin-left: 20px; /* 그리드와 약간의 간격 */
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.aboutus_qa_content {
+    flex: 1;
+    max-width: 60%;
+}
+
+.aboutus_container2_pic {
+    flex: 1;
+    max-width: 40%;
+    margin-top: -140px; 
+    margin-left: 50px;
 }
 
 .aboutus_container2_pic img {
-    max-width: 30%; /* 사진 크기 축소 */
-    height: auto; /* 비율 유지 */
-    display: block; /* 여백 제거 */
+    width: 100%;
+    height: auto;
+    display: block;
 }
  
 /*aboutus3 css*/
@@ -349,9 +367,10 @@
 
 .aboutus_container3_left img {
     max-width: 100%;
-    height: auto;
+    height: 400px;
     justify-self: center;
-    margin-top: 10px;
+    align-items: center;
+    margin-top: -50px;
 }
 
 .aboutus_container3_right {

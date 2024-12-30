@@ -16,6 +16,7 @@ body{
     padding-right: calc(var(--bs-gutter-x) * .5);
     padding-left: calc(var(--bs-gutter-x) * .5);
 }
+
 .main-container-team{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -23,10 +24,9 @@ body{
     background-color: rgb(255, 255, 255);
     gap: 30px;
     padding: 60px 0;
-    width: 100%;
+    /*width: 100%;*/
     scroll-margin-top: 88px;
     overflow: clip;
-    justify-items:center;
     align-items: center;
     position: relative;
 }
@@ -88,12 +88,13 @@ body{
     position: relative;
     border-radius: 5px;
     transition: 0.5s;
-    width: 576px;
-    height: 161px;
+    /*width: 576px;*/
+    height: 221px;
     padding: 30px 12px;
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    max-width: 570px;
 }
 .team-member:hover{
     transform: translateY(-10px);
@@ -113,7 +114,9 @@ img{
     display: flex;
     flex-direction: column;
     align-content: center;
+    justify-content: center;
 }
+
 .name{
     font-family: "Jost", sans-serif;
     font-weight: 700;

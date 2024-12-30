@@ -194,4 +194,8 @@ html, body {
     padding: 10px 30px;
     transition: 0.4s;
     border-radius: 50px;
+    cursor: pointer;
+}
+.send-message:hover{
+    background: color-mix(in srgb, #47b2e4, transparent 25%);
 }

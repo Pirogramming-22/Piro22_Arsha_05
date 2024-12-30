@@ -81,14 +81,30 @@ html, body {
     padding: 30px;
 }
 .contact-bottom-left-part{
+    display: flex;
+    flex-direction: row;
     margin: 0 0 40px;
 }
 .contact-name{
     padding: 0 0 8px;
 }
-.class-contact-icon{
+.contact-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 44px;
     height: 44px;
+    background: color-mix(in srgb, #47b2e4, transparent 92%);
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+.contact-icon:hover{
+    background:#47b2e4;
+}
+.contact-icon>img{
+    width:20px;
+    height: 20px;
 }
 .contact-icon-title{
     padding: 0;
@@ -132,6 +148,11 @@ html, body {
     margin: 24px 0 0;
     padding: 0 12px;
 }
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .info-button{
     margin: 24px 0 0;
     padding: 0 12px;
@@ -141,6 +162,18 @@ html, body {
 }
 .contact-input{
     font-size: 14px;
+    box-sizing: border-box;
+    height: 43px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    border-color: color-mix(in srgb, #444444, transparent 80%);
+    border: 1px solid #dee2e6;
+}
+.contact-textarea{
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 232px;
     padding: 10px 15px;
     box-shadow: none;
     border-radius: 0;
@@ -149,4 +182,16 @@ html, body {
 }
 .info-small{
     width:331px;
+}
+.send-message{
+    width: 166.7px;
+    height:44px;
+    font-size: 16px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+    color: #ffffff;
+    background: #47b2e4;
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 50px;
 }

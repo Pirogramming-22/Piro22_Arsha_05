@@ -116,14 +116,11 @@ h1, h2, h3, h4, h5 {
 }
 .faq-item label {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     cursor: pointer;
     user-select: none;
 }
-.faq-questionmark::before, .chevron-icon::before{
+.faq-questionmark, .chevron-icon{
     display: inline-block;
-    /* font-family: bootstrap-icons !important; */
     font-style: normal;
     font-weight: normal !important;
     font-variant: normal;
@@ -131,18 +128,13 @@ h1, h2, h3, h4, h5 {
     line-height: 1;
     vertical-align: -.125em;
 }
-.faq-questionmark::before {
-    content: "\f505";
-    font-size: inherit; 
-    color: inherit;
-}
-.faq-questionmark{
+.faq-questionmark img{
     position: absolute;
     top: 22px;
     left: 20px;
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
     line-height: 0;
-    color: var(--accent-color);
 }
 .faq-items h3 {
     font-weight: 600;
@@ -152,27 +144,18 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
     display: flex;
 }
-.chevron-icon::before {
-    content: "\f285";
-    font-size: inherit; 
-    color: inherit;
-}
-.chevron-icon:hover {
+.chevron-icon img:hover {
     color: var(--accent-color);
 }
-.chevron-icon{
+.chevron-icon img{
     position: absolute;
     top: 20px;
     right: 20px;
-    font-size: 16px;
+    width: 20px;
+    height: 20px;
     line-height: 0;
     transition: transform 0.5s ease-in-out;
     cursor: pointer;
-}
-.faq-toggle:checked + label .chevron-icon::before {
-    transform: rotate(90deg);
-    color: var(--accent-color);
-    transition: transform 0.5s ease-in-out;
 }
 .faq-content{
     max-height: 0;
@@ -195,7 +178,12 @@ h1, h2, h3, h4, h5 {
 .faq-toggle:not(:checked) + .faq-content{
     transition: transform 0.5s ease-in-out;
 }
-.faq-toggle:not(:checked) + label .chevron-icon::before {
+.faq-toggle:checked + label .chevron-icon img{
+    transform: rotate(90deg);
+    color: var(--accent-color);
+    transition: transform 0.5s ease-in-out;
+}
+.faq-toggle:not(:checked) + label .chevron-icon img {
     transform: rotate(0deg); 
     transition: transform 0.5s ease-in-out; 
 }

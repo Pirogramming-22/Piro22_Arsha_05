@@ -113,22 +113,6 @@ h1, h2, h3, h4, h5 {
 	border-radius:50%;
 	cursor:pointer;
 }
-label.left {
-	left:20px;
-	background-color:#5F5F5F;
-	background-image:url('./img/left-arrow.png');
-	background-position:center center;
-	background-size:50%;
-	background-repeat:no-repeat;
-}
-label.right {
-	right:20px;
-	background-color:#5F5F5F;
-	background-image:url('./img/right-arrow.png');
-	background-position:center center;
-	background-size:50%;
-	background-repeat:no-repeat;
-}
 .testimonials .testimonial-item .testimonial-img {
     width: 120px;
     border-radius: 50%;
@@ -190,10 +174,10 @@ p{
     transform: scale(-1, -1);
 }
 
-[id="slide01"]:checked ~ .slidelist .slideitem {transform:translateX(0);animation:slide01 20s infinite;}
-[id="slide02"]:checked ~ .slidelist .slideitem {transform:translateX(-100%);animation:slide02 20s infinite;}
-[id="slide03"]:checked ~ .slidelist .slideitem {transform:translateX(-200%);animation:slide03 20s infinite;}
-[id="slide04"]:checked ~ .slidelist .slideitem {transform:translateX(-300%);animation:slide04 20s infinite;}
+[id="slide01"]:checked ~ .swiper-list .swiper-slide {transform:translateX(0);animation:slide01 20s infinite;}
+[id="slide02"]:checked ~ .swiper-list .swiper-slide {transform:translateX(-100%);animation:slide02 20s infinite;}
+[id="slide03"]:checked ~ .swiper-list .swiper-slide {transform:translateX(-200%);animation:slide03 20s infinite;}
+[id="slide04"]:checked ~ .swiper-list .swiper-slide {transform:translateX(-300%);animation:slide04 20s infinite;}
 
 @keyframes slide01 {
 	0% {left:0%;}
